@@ -1,3 +1,6 @@
+# API key for New York Times
+NYTIMES_API_KEY
+
 # Logs
 logs
 *.log

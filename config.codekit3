@@ -34,15 +34,6 @@
 		"sC": 1,
 		"tS": 0
 		},
-	"\/assets\/js\/config.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "\/js\/min\/config.min.js",
-		"oF": 3,
-		"sC": 1,
-		"tS": 0
-		},
 	"\/firebase-debug.log": {
 		"ft": 8192,
 		"oA": 2,

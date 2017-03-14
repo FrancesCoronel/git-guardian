@@ -11,13 +11,18 @@ nav .brand-logo {
 }
 
 ul#nav-mobile {
-      padding-right: 2em;
+    padding-right: 2em;
 }
 
 a {
-  color:  #212121;
+    color: #212121;
 }
 
 h5 {
-  font-size: 1.2em;
+    font-size: 1.2em;
+}
+
+footer {
+    position: absolute;
+    width: 100%;
 }

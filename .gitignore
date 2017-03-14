@@ -1,5 +1,5 @@
-# API key for New York Times
-NYTIMES_API_KEY
+# API Keys
+js/config.js
 
 # Logs
 logs

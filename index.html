@@ -1,91 +1,108 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="flickrTimes">
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="description" content="Powered by ACM@ODU">
-    <title>flickrTimes</title>
-    <!-- *** CSS *** -->
-    <!-- Bootstrap 4 -->
-    <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">
-    <!-- Angular Material -->
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0-rc1/angular-material.min.css">
-    <!-- main CSS file -->
-    <link href='css/main.css' rel='stylesheet' type='text/css'>
-    <!-- *** Icons *** -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+    <title>GitTimes</title>
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="https://pbs.twimg.com/profile_images/492049081770864640/l-cBrf_6.png">
+    <!-- Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <!-- *** Fonts *** -->
-    <!-- Inconsolata Font -->
-    <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
-    <!-- *** Favicons *** -->
-    <!-- For old IEs -->
-    <link rel="shortcut icon" href="img/favicons/favicon.ico" />
-    <!-- For new browsers multisize ico  -->
-    <link rel="icon" type="image/x-icon" sizes="16x16 32x32" href="img/favicons/favicon.ico">
-    <!-- Chrome for Android -->
-    <link rel="icon" sizes="192x192" href="img/favicons/favicon-192.png">
-    <!-- For iPhone 6+ downscaled for other devices -->
-    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="img/favicons/favicon-180.png">
-    <!-- For IE10 Metro -->
-    <meta name="msapplication-TileColor" content="#FFFFFF">
-    <meta name="msapplication-TileImage" content="img/favicons/favicon-144.png">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <!-- Materialize JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>
+    <!-- JS -->
+    <script src="assets/js/app.js"></script>
 </head>
 
 <body>
-    <div ng-controller="MainController" ng-cloak="">
-        <md-toolbar>
-            <div class="md-toolbar-tools">
-                <span flex=""></span>
-                <h2>flickrTimes</h2>
-                <span flex=""></span>
-                <a href="https://github.com/fvcproductions/cmtech-assignment-1" target="_blank">
-                    <md-button class="md-fab md-mini" aria-label="Favorite">
-                        <i class="fa fa-github-alt"></i>
-                    </md-button>
-                </a>
-                <span flex=""></span>
-            </div>
-        </md-toolbar>
-        <br>
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo"><i class="fa fa-github-alt"></i> GitTimes</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="http://github.com/fvcproductions/cmtech-assignment-1" target="_blank">View on GitHub</a></li>
+                <li><a href="http://tech.cornell.edu" target="_blank">About Cornell Tech</a></li>
+                <li>
+                    <button disabled class="btn waves-effect waves-light blue" id="quickstart-sign-in"><i class="fa fa-github-alt left"></i> Sign in with GitHub</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="section no-pad-bot" id="index-banner">
         <div class="container">
+            <br>
+            <br>
+            <h1 class="header center">GitHub + NYTimes = GitTimes</h1>
+            <div class="row center">
+                <h5 class="header col s12 light">Login with GitHub and see which headlines from the NYTimes correspond to your tweets!</h5>
+            </div>
+        </div>
+        <br>
+        <br>
+    </div>
+    </div>
+    <div class="container">
+        <div class="section">
             <div class="row">
-                <div class="card-columns">
-                    <div class="card" ng-repeat="article in articles">
-                        <div class="card-block">
-                            <h4 class="card-title">
-                                <a href="{{ article.web_url }}" target="_blank">
-                                    {{ article.headline.main }}
-                                </a>
-                            </h4>
-                            <p class="card-text">{{ article.lead_paragraph }}</p>
-                            <p class="card-text">{{ article.pub_date }}</p>
+                <div class="quickstart-user-details-container">
+                    Firebase sign-in status: <span id="quickstart-sign-in-status">Unknown</span>
+                    <div>Firebase auth <code>currentUser</code> object value:</div>
+                    <pre><code id="quickstart-account-details">null</code></pre>
+                    <div>GitHub OAuth Token:</div>
+                    <pre><code id="quickstart-oauthtoken">null</code></pre>
+                    <div>GitHub OAuth Secret:</div>
+                    <pre><code id="quickstart-oauthsecret">null</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="row">
+                <div class="col s12 m6">
+                    <div class="card blue-grey darken-1">
+                        <div class="card-content white-text">
+                            <span class="card-title">GitHub Commit</span>
+                            <p>Made some changes to API!</p>
                         </div>
-                        <div class="card-block">
-                            <a ng-href="{{ article.web_url }}" target="_blank" class="btn btn-primary-outline">
-                                Learn More
-                            </a>
+                        <div class="card-action">
+                            <a href="#">View on GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6">
+                    <div class="card">
+                        <div class="card-content black-text">
+                            <span class="card-title">New York Times Headline</span>
+                            <p>I'm a headline!</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#">View on New York Times</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <!-- Bootstrap 4 -->
-    <script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js"></script>
-    <!-- Angular Material Dependencies -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-animate.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-aria.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/0.11.2/angular-material.min.js"></script>
-    <!-- Moment JS -->
-    <script src="js/moment.js"></script>
-    <!-- Our main JS -->
-    <script src="js/app.js"></script>
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <h5 class="white-text">CMTech | Spring 2017</h5>
+                <p class="grey-text text-lighten-4">Created with lots of <i class="fa fa-heart"></i> by <a href="http://github.com/fvcproductions" target="_blank">Frances Coronel</a> and Mengjiao (Molly) Zhu.</p>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2017 Cornell Tech
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>

@@ -1,0 +1,19 @@
+.icon-block {
+    padding: 0 15px;
+}
+
+.icon-block .material-icons {
+    font-size: inherit;
+}
+
+nav .brand-logo {
+    padding-left: 2em;
+}
+
+ul#nav-mobile {
+      padding-right: 2em;
+}
+
+a {
+  color:  #212121;
+}

@@ -6,21 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
     <title>GitTimes</title>
     <!-- Favicons -->
-    <link rel="shortcut icon" href="https://pbs.twimg.com/profile_images/492049081770864640/l-cBrf_6.png">
+    <link rel="shortcut icon" href="http://www.nytimes.com/favicon.ico">
     <!-- Materialize CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
     <!-- Font Awesome -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/main.css">
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <!-- Materialize JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
-    <!-- Firebase -->
-    <script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>
-    <!-- JS -->
-    <script src="assets/js/app.js"></script>
 </head>
 
 <body>
@@ -38,19 +30,15 @@
     </nav>
     <div class="section no-pad-bot" id="index-banner">
         <div class="container">
-            <br>
-            <br>
             <h1 class="header center">GitHub + NYTimes = GitTimes</h1>
             <div class="row center">
-                <h5 class="header col s12 light">Login with GitHub and see which headlines from the NYTimes correspond to your tweets!</h5>
+                <h5 class="header col s12 light">What news did you miss while you were coding?</h5>
             </div>
         </div>
-        <br>
-        <br>
     </div>
     </div>
     <div class="container">
-        <div class="section">
+        <!--<div class="section">
             <div class="row">
                 <div class="quickstart-user-details-container">
                     Firebase sign-in status: <span id="quickstart-sign-in-status">Unknown</span>
@@ -62,31 +50,22 @@
                     <pre><code id="quickstart-oauthsecret">null</code></pre>
                 </div>
             </div>
-        </div>
+            <div class="row" id="user-info">
+                <div class="col s12 m7">
+                    <div class="card">
+                        <div class="card-image">
+                            <img id="user-photo" src="">
+                        </div>
+                        <div class="card-content">
+                            <p>Welcome, </p><p id="#user-name"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
         <div class="section">
             <div class="row">
-                <div class="col s12 m6">
-                    <div class="card blue-grey darken-1">
-                        <div class="card-content white-text">
-                            <span class="card-title">GitHub Commit</span>
-                            <p>Made some changes to API!</p>
-                        </div>
-                        <div class="card-action">
-                            <a href="#">View on GitHub</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 m6">
-                    <div class="card">
-                        <div class="card-content black-text">
-                            <span class="card-title">New York Times Headline</span>
-                            <p>I'm a headline!</p>
-                        </div>
-                        <div class="card-action">
-                            <a href="#">View on New York Times</a>
-                        </div>
-                    </div>
-                </div>
+                <div id="commits"></div>
             </div>
         </div>
     </div>
@@ -103,6 +82,16 @@
             </div>
         </div>
     </footer>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <!-- Materialize JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+    <!-- Moment -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>
+    <!-- JS -->
+    <script src="assets/js/app.js"></script>
 </body>
 
 </html>

@@ -26,3 +26,12 @@ footer {
     position: absolute;
     width: 100%;
 }
+
+.card-content a {
+  color:  #2196F3 !important;
+}
+
+.card-content a:hover {
+  color:  white;
+  text-decoration: underline;
+}

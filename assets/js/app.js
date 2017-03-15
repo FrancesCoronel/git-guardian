@@ -63,7 +63,7 @@ var getUserCommits = function() {
     var commit_headline = "";
     $.ajax({
         method: "GET",
-        url: "https://api.github.com/users/fvcproductions/events",
+        url: "https://api.github.com/users/cornelltech/events",
         dataType: 'json',
         async: false,
         success: function(events) {

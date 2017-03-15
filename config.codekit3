@@ -41,6 +41,38 @@
 		"oF": 0,
 		"opt": 1
 		},
+	"\/assets\/img\/user-2.png": {
+		"ft": 32768,
+		"iS": 115442,
+		"oA": 0,
+		"oAP": "\/assets\/img\/user-2.png",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/assets\/img\/user-3.png": {
+		"ft": 32768,
+		"iS": 108510,
+		"oA": 0,
+		"oAP": "\/assets\/img\/user-3.png",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/assets\/img\/user-4.png": {
+		"ft": 32768,
+		"iS": 119149,
+		"oA": 0,
+		"oAP": "\/assets\/img\/user-4.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/assets\/img\/user-5.png": {
+		"ft": 32768,
+		"iS": 105348,
+		"oA": 0,
+		"oAP": "\/assets\/img\/user-5.png",
+		"oF": 0,
+		"opt": 0
+		},
 	"\/assets\/js\/app.js": {
 		"ft": 64,
 		"mi": 1,

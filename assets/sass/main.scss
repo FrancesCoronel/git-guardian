@@ -1,0 +1,69 @@
+$guardian: #105886;
+$light-blue: #AEDCE5;
+.icon-block {
+    padding: 0 15px;
+    &.material-icons {
+        font-size: inherit;
+    }
+}
+
+h4 {
+    font-size: 1.5em;
+}
+
+h5 {
+    font-size: 1.2em;
+}
+
+nav {
+    a.brand-logo {
+        padding-left: 2em !important;
+    }
+    ul#nav-mobile {
+        padding-right: 2em;
+    }
+}
+
+nav,
+footer.page-footer {
+    background-color: $guardian;
+}
+
+.logo {
+    text-align: center;
+}
+
+.card {
+    &.medium {
+        height: 350px;
+    }
+    .card-content {
+        color: black !important;
+        .card-title {
+            margin-bottom: 30px;
+            a {
+                font-family: 'Roboto Slab', serif;
+                color: $guardian !important;
+                &:hover {
+                    color: $light-blue !important;
+                }
+            }
+        }
+    }
+    .card-action {
+        a {
+            color: $guardian !important;
+            &:hover {
+                color: $light-blue !important;
+            }
+        }
+    }
+}
+
+footer {
+    font-family: 'Roboto Slab', serif;
+    a {
+        color: white;
+        text-decoration: underline;
+    }
+}

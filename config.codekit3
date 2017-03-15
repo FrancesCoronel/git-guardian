@@ -27,9 +27,17 @@
 		},
 	"\/assets\/img\/entire-screen.png": {
 		"ft": 32768,
-		"iS": 827387,
+		"iS": 435153,
 		"oA": 0,
 		"oAP": "\/assets\/img\/entire-screen.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/assets\/img\/logo.png": {
+		"ft": 32768,
+		"iS": 25022,
+		"oA": 0,
+		"oAP": "\/assets\/img\/logo.png",
 		"oF": 0,
 		"opt": 1
 		},
@@ -81,6 +89,25 @@
 		"oF": 3,
 		"sC": 1,
 		"tS": 0
+		},
+	"\/assets\/sass\/main.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/assets\/css\/main.css",
+		"oF": 2,
+		"oS": 3,
+		"uL": 1
+		},
+	"\/assets\/sketch\/GitGuardian.sketch": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/assets\/sketch\/GitGuardian.sketch",
+		"oF": 0
 		},
 	"\/firebase-debug.log": {
 		"ft": 8192,

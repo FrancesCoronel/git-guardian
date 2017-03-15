@@ -71,10 +71,10 @@ var getUserCommits = function() {
                 if (event.type === "PushEvent") {
                     commit_date = event.created_at;
                     repo = event.repo.name;
-                    show_date = moment(commit_date).format("MMMM Do, YYYY HH:mm");
+                    show_date = moment(commit_date).format('MMMM Do YYYY, h:mm a');
                     $.each(event.payload.commits, function(key2, pushEvent) {
                         getHeadline(commit_date);
-                        $("#commits").append("<div class='col s12 m6'><div class='card'><div class='card-content'><span class='card-title'><a target='_blank' href='" + headline_url + "'>" + headline + "</a></span><h5>" + repo + "</h5><p>" + show_date + "</p><p>" + pushEvent.message + "</p></div><div class='card-action'><a href='" + pushEvent.url + "'>View on GitHub</a></div></div></div>");
+                        $("#commits").append("<div class='col s12 m6'><div class='card medium'><div class='card-content'><span class='card-title'><a target='_blank' href='" + headline_url + "'>" + headline + "</a></span><h5>" + repo + "</h5><br><p>" + show_date + "</p><br><p>" + pushEvent.message + "</p></div><div class='card-action'><a href='" + pushEvent.url + "'>View on GitHub</a></div></div></div>");
                     });
                 }
             });

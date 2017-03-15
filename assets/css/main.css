@@ -28,10 +28,16 @@ footer {
 }
 
 .card-content a {
-  color:  #2196F3 !important;
+    color: #2196F3 !important;
 }
 
 .card-content a:hover {
-  color:  white;
-  text-decoration: underline;
+    color: white;
+    text-decoration: underline;
+}
+
+.card {
+    min-height: 310px;
+    max-height: 310px;
+    overflow-x: auto;
 }

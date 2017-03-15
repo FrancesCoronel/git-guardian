@@ -25,6 +25,22 @@
 		"oF": 1,
 		"oS": 0
 		},
+	"\/assets\/img\/entire-screen.png": {
+		"ft": 32768,
+		"iS": 827387,
+		"oA": 0,
+		"oAP": "\/assets\/img\/entire-screen.png",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/assets\/img\/screenshot.png": {
+		"ft": 32768,
+		"iS": 101336,
+		"oA": 0,
+		"oAP": "\/assets\/img\/screenshot.png",
+		"oF": 0,
+		"opt": 1
+		},
 	"\/assets\/js\/app.js": {
 		"ft": 64,
 		"mi": 1,
